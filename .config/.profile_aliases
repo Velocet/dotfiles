@@ -1,0 +1,16 @@
+# ~/.config/.profile_aliases - Alias definitions file
+
+# color support for various commands
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# some handy aliases
+alias l="ls -AFov --group-directories-first --no-group --human-readable --time-style=long-iso --hyperlink=auto"
+alias lg="ls -AFov --group-directories-first --human-readable --time-style=long-iso --hyperlink=auto"
+alias lx="ls -AFovX --group-directories-first --no-group --human-readable --time-style=long-iso --hyperlink=auto"
+alias users="cut -d : -f 1 /etc/passwd"
+alias packages="dpkg --list"
+alias services="service --status-all"
+alias zombies="ps aux | grep 'Z' # pstree -p -s PID to find parent"

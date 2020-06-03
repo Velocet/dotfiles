@@ -1,0 +1,56 @@
+# --global
+# $XDG_CONFIG_HOME/git/config / ~/.gitconfig
+
+[user]
+	email = velocet@users.noreply.github.com
+	name = Velocet
+[credential]
+	username = Velocet
+	helper = store
+# [credential "https://gitlab.com"]
+	# username = Velocet
+# [credential "https://github.com"]
+	# username = Velocet
+; [credential "https://bitbucket.org"]
+; 	username = velocet_moloko
+[credentialCache]
+	# Tell credential-cache—​daemon to ignore SIGHUP, instead of quitting
+	ignoreSIGHUP = true
+[color]
+	ui = always
+[core]
+	safecrlf = warn
+	autocrlf = input
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[fetch]
+	# Fetches to be run in parallel (--multiple option of git-fetch)
+	parallel = 0
+[grep]
+	lineNumber = true
+	# Number of grep worker threads
+	threads = 0
+[gui]
+	# Dictionary used for spell checking commit messages
+	spellingDictionary = none
+[http]
+	# File containing previously stored cookie lines
+	cookieFile = ~/.config/git/cookie
+	# Store cookies received during requests
+	saveCookies = true
+	# Verify SSL certificate when fetching/pushing over HTTPS
+	sslVerify = false
+	# Certificate revocation checks in cURL when http.sslBackend is set to "schannel"
+	schannelCheckRevoke = false
+[index]
+	# Number of threads to spawn when loading the index
+	threads = 0
+[pack]
+	# Number of threads to spawn when searching for best delta matches
+	threads = 0
+[pull]
+	# Rebase branches on top of the fetched branch
+	# rebase = true
