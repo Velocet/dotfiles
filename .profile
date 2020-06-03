@@ -5,10 +5,20 @@
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.local/.cache"
-
+# wget XDG
 export WGETRC="$XDG_CONFIG_HOME/.wgetrc"
+# vim XDG
 export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
+# python XDG
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/.pythonrc.py"
+# gpg
+export GNUPGHOME="$XDG_CONFIG_HOME/.gnupg"
+
+# enable passphrase prompt for gpg
+GPG_TTY=$(tty)
+export GPG_TTY
+
+export POWERSHELL_TELEMETRY_OPTOUT=1
 
 # default umask is set in /etc/profile
 #umask 022
@@ -75,5 +85,3 @@ export PATH=$PATH:$PS2DEV/bin:$PS2DEV/ee/bin:$PS2DEV/iop/bin:$PS2DEV/dvp/bin:$PS
 
 # MOTD
 neofetch
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dfiles/ --work-tree=$HOME'

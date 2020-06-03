@@ -1,27 +1,26 @@
-# --global
-# $XDG_CONFIG_HOME/git/config / ~/.gitconfig
+# --global $XDG_CONFIG_HOME/git/config / ~/.gitconfig
 
 [user]
 	email = velocet@users.noreply.github.com
 	name = Velocet
+	signingkey = 67ACAC23824114C6
 [credential]
 	username = Velocet
 	helper = store
-# [credential "https://gitlab.com"]
-	# username = Velocet
-# [credential "https://github.com"]
-	# username = Velocet
-; [credential "https://bitbucket.org"]
-; 	username = velocet_moloko
-[credentialCache]
-	# Tell credential-cache—​daemon to ignore SIGHUP, instead of quitting
-	ignoreSIGHUP = true
+[credential "https://github.com"]
+	username = Velocet
+[credential "https://gitlab.com"]
+	username = Velocet
+[credential "https://bitbucket.org"]
+ 	username = velocet_moloko
 [color]
 	ui = always
 [core]
 	safecrlf = warn
 	autocrlf = input
 	editor = code --wait
+[commit]
+	gpgsign = true
 [diff]
 	tool = default-difftool
 [difftool "default-difftool"]

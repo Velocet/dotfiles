@@ -14,3 +14,8 @@ alias users="cut -d : -f 1 /etc/passwd"
 alias packages="dpkg --list"
 alias services="service --status-all"
 alias zombies="ps aux | grep 'Z' # pstree -p -s PID to find parent"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotminor='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit --all --amend --no-edit'
+alias dotadd='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
+alias dotstatus='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status'

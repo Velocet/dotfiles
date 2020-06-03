@@ -3,6 +3,10 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
+export HISTFILE="$HOME/.local/share/.zsh_history"
+export ZSH_CACHE_DIR="$HOME/.cache/zsh"
+
+setopt COMPLETE_ALIASES
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -61,14 +65,14 @@ export UPDATE_ZSH_DAYS=1
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+#ZSH_CUSTOM=$HOME/.config/zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ripgrep ubuntu urltools colored-man-pages colorize common-aliases extract pip sudo vscode)
+plugins=(git ripgrep ubuntu colored-man-pages colorize common-aliases extract sudo vscode systemadmin)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,8 +100,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-HISTFILE="$HOME/.config/.zsh_history"
-export HISTFILE="$HOME/.config/.zsh_history"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/.p10k.zsh ]] || source ~/.config/.p10k.zsh
